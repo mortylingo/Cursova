@@ -63,5 +63,37 @@ namespace WindowsFormsApp1.forms
         {
             surnameField.Text = null;
         }
-    }
+
+        private void loginField_Leave(object sender, EventArgs e)
+        {
+            if(loginField.Text == "")
+            {
+                loginField.Text = "Введіть логін";
+            }
+        }
+
+        private void regField_Leave(object sender, EventArgs e)
+        {
+            if (regField.Text == "")
+            {
+                regField.Text = "Введіть пароль";
+            }
+        }
+
+        private void nameField_Leave(object sender, EventArgs e)
+        {
+            if (nameField.Text == "")
+            {
+                nameField.Text = "Введіть ім'я";
+            }
+        }
+
+        private void surnameField_Leave(object sender, EventArgs e)
+        {
+            if (surnameField.Text == "")
+            {
+                surnameField.Text = "Введіть фамілію";
+            }
+        }
+}
 }

@@ -66,8 +66,8 @@ namespace WindowsFormsApp1.classes
             dt.Columns.Add("Місце завантаження");
             dt.Columns.Add("Місце вигрузки");
             dt.Columns.Add("Вантаж");
-            dt.Columns.Add("Ціна");
-            dt.Columns.Add("Вага");
+            dt.Columns.Add("Ціна ($)");
+            dt.Columns.Add("Вага (T)");
             foreach (var truck in currentUser.trucks)
             {
                 if (truck.Plates == plate)
@@ -96,22 +96,57 @@ namespace WindowsFormsApp1.classes
                 {
                     foreach (var trip in truck.Trips)
                     {
-                        if (trip.EndingPoint == filter && choose == 0)
+                        switch (choose){
+                            case 0:
+                                {
+                                    if (trip.StartingPoint == filter)
+                                    {
+                                        dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
+                                    }
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    if (trip.EndingPoint == filter)
+                                    {
+                                        dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
+                                    }
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    if (trip.cargo.Price == Convert.ToDouble(filter))
+                                    {
+                                        dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
+                                    }
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    if (trip.cargo.Name == filter)
+                                    {
+                                        dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
+                                    }
+                                    break;
+                                }
+
+                        }/*
+                        if (trip.EndingPoint == filter && choose == 1)
                         {
                             dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
                         }
-                        if (trip.StartingPoint == filter && choose == 1)
+                        if (trip.StartingPoint == filter && choose == 0)
+                        {
+                            dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
+                        }                      
+                        if (trip.cargo.Name == filter && choose == 3)
                         {
                             dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
                         }
                         if (trip.cargo.Price == Convert.ToDouble(filter) && choose == 2)
                         {
                             dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
-                        }
-                        if (trip.cargo.Name == filter && choose == 3)
-                        {
-                            dt.Rows.Add(trip.StartingPoint, trip.EndingPoint, trip.cargo.Name, trip.cargo.Price, trip.cargo.Mass);
-                        }
+                        }*/
                     }
                 }
             }

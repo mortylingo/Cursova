@@ -44,15 +44,30 @@ namespace WindowsFormsApp1.forms
             form.Show();
             this.Hide();
         }
-
-        private void passwordField_Click(object sender, EventArgs e)
-        {
-            passwordField.Mask = null;
-        }
-
-        private void loginField_Click(object sender, EventArgs e)
+        private void loginField_Enter(object sender, EventArgs e)
         {
             loginField.Text = null;
+        }
+
+        private void passwordField_Enter(object sender, EventArgs e)
+        {
+            passwordField.Text = null;
+            passwordField.PasswordChar = '*';
+        }
+
+        private void passwordField_Leave(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "")
+            {
+                passwordField.Text = "Введіть пароль";
+                passwordField.PasswordChar = '\0';
+            }
+        }
+
+        private void loginField_Leave(object sender, EventArgs e)
+        {   
+            if(loginField.Text == "")
+            loginField.Text = "Введіть логін";
         }
     }
 }

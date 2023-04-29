@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Amazon.Runtime.Internal.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,14 +22,14 @@ namespace WindowsFormsApp1.forms
             this.currentUser = user;
             this.currentPlates = plate;
             InitializeComponent();
-            this.Size = new System.Drawing.Size(800,150);
             comboBox1.Items.AddRange(new string[] {"Місце завантаження","Місце вивантаження","Ціна","Вантаж"});
+            Custom custom = new Custom(dataGridView1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DatabaseController _db = new DatabaseController();
-            this.Size = new System.Drawing.Size(800, 350);
+            this.Size = new System.Drawing.Size(799, 350);
             _db.searchResults(dataGridView1, currentUser, comboBox1.SelectedIndex, textBox1.Text,currentPlates);
         }
     }

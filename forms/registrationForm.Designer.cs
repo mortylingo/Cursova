@@ -40,54 +40,62 @@
             // loginField
             // 
             this.loginField.BackColor = System.Drawing.SystemColors.MenuText;
-            this.loginField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loginField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginField.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.loginField.Location = new System.Drawing.Point(76, 36);
+            this.loginField.Location = new System.Drawing.Point(81, 38);
             this.loginField.Name = "loginField";
-            this.loginField.Size = new System.Drawing.Size(148, 20);
+            this.loginField.Size = new System.Drawing.Size(148, 19);
             this.loginField.TabIndex = 0;
             this.loginField.Text = "Введіть логін";
             this.loginField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.loginField.Click += new System.EventHandler(this.loginField_Click);
+            this.loginField.Leave += new System.EventHandler(this.loginField_Leave);
             // 
             // regField
             // 
             this.regField.BackColor = System.Drawing.SystemColors.MenuText;
-            this.regField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.regField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.regField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.regField.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.regField.Location = new System.Drawing.Point(255, 36);
+            this.regField.Location = new System.Drawing.Point(260, 38);
             this.regField.Name = "regField";
-            this.regField.Size = new System.Drawing.Size(148, 20);
+            this.regField.Size = new System.Drawing.Size(148, 19);
             this.regField.TabIndex = 0;
             this.regField.Text = "Введіть пароль";
             this.regField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.regField.Click += new System.EventHandler(this.regField_Click);
+            this.regField.Leave += new System.EventHandler(this.regField_Leave);
             // 
             // nameField
             // 
             this.nameField.BackColor = System.Drawing.SystemColors.MenuText;
-            this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameField.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.nameField.Location = new System.Drawing.Point(76, 80);
+            this.nameField.Location = new System.Drawing.Point(81, 82);
             this.nameField.Name = "nameField";
-            this.nameField.Size = new System.Drawing.Size(148, 20);
+            this.nameField.Size = new System.Drawing.Size(148, 19);
             this.nameField.TabIndex = 0;
             this.nameField.Text = "Введіть ім\'я";
             this.nameField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nameField.Click += new System.EventHandler(this.nameField_Click);
+            this.nameField.Leave += new System.EventHandler(this.nameField_Leave);
             // 
             // surnameField
             // 
             this.surnameField.BackColor = System.Drawing.SystemColors.MenuText;
-            this.surnameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.surnameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.surnameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.surnameField.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.surnameField.Location = new System.Drawing.Point(255, 80);
+            this.surnameField.Location = new System.Drawing.Point(260, 82);
             this.surnameField.Name = "surnameField";
-            this.surnameField.Size = new System.Drawing.Size(148, 20);
+            this.surnameField.Size = new System.Drawing.Size(148, 19);
             this.surnameField.TabIndex = 0;
             this.surnameField.Text = "Введіть фамілію";
             this.surnameField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.surnameField.Click += new System.EventHandler(this.surnameField_Click);
+            this.surnameField.Leave += new System.EventHandler(this.surnameField_Leave);
             // 
             // button1
             // 

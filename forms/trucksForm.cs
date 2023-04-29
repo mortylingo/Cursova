@@ -26,6 +26,11 @@ namespace WindowsFormsApp1.forms
         private void trucksForm_Load(object sender, EventArgs e)
         {
             _db.readTrucks(dataGridView1, currentUser);
+            Custom customize = new Custom(dataGridView1);
+            dataGridView1.Columns[0].Width = 200;
+            dataGridView1.Columns[1].Width = 140;
+            dataGridView1.Columns[2].Width = 140;
+            dataGridView1.Columns[3].Width = 140;
         }
 
         //Додавання вантажівки
@@ -85,6 +90,63 @@ namespace WindowsFormsApp1.forms
             manufacturerField.Text = Convert.ToString(dataGridView1.Rows[rowIndex].Cells[1].Value);
             modelField.Text = Convert.ToString(dataGridView1.Rows[rowIndex].Cells[2].Value);
             plateField.Text = Convert.ToString(dataGridView1.Rows[rowIndex].Cells[3].Value);
+        }
+
+        private void trucksForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void driverField_Enter(object sender, EventArgs e)
+        {
+            driverField.Text = null;
+        }
+
+        private void manufacturerField_Enter(object sender, EventArgs e)
+        {
+            manufacturerField.Text = null;
+        }
+
+        private void modelField_Enter(object sender, EventArgs e)
+        {
+            modelField.Text = null;
+        }
+
+        private void plateField_Enter(object sender, EventArgs e)
+        {
+            plateField.Text = null;
+        }
+
+        private void driverField_Leave(object sender, EventArgs e)
+        {
+            if(driverField.Text == "")
+            {
+                driverField.Text = "Введіть водія";
+            }
+        }
+
+        private void manufacturerField_Leave(object sender, EventArgs e)
+        {
+            if (manufacturerField.Text == "")
+            {
+                manufacturerField.Text = "Введіть марку";
+            }
+        }
+
+        private void modelField_Leave(object sender, EventArgs e)
+        {
+            if (modelField.Text == "")
+            {
+                modelField.Text = "Введіть модель";
+            }
+        }
+
+        private void plateField_Leave(object sender, EventArgs e)
+        {
+            if (plateField.Text == "")
+            {
+                plateField.Text = "Введіть номери";
+            }
         }
     }
 }

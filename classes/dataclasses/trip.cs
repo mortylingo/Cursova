@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.classes.dataclasses
     public class Trip
     {
         public Trip(string _start,string _end, string _name, double _mass, double _price) { 
-            cargo = new Cargo(_mass, _price, _name);
+            cargo = new Cargo(_name, _mass, _price);
             StartingPoint = _start;
             EndingPoint = _end;
         }
@@ -23,18 +23,18 @@ namespace WindowsFormsApp1.classes.dataclasses
     }
     public class Cargo
     {
-        public Cargo(double mass, double price, string name)
+        public Cargo(string name, double mass, double price)
         {
             Mass = mass;
             Price = price;
             Name = name;
         }
         [BsonElement]
+        public string Name;
+        [BsonElement]
         public double Mass;
         [BsonElement]
         public double Price;
-        [BsonElement]
-        public string Name;
 
     }
 }

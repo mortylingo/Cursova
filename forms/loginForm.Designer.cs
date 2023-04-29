@@ -38,27 +38,32 @@
             // loginField
             // 
             this.loginField.BackColor = System.Drawing.SystemColors.MenuText;
+            this.loginField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginField.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.loginField.Location = new System.Drawing.Point(58, 60);
+            this.loginField.Location = new System.Drawing.Point(59, 52);
             this.loginField.Name = "loginField";
-            this.loginField.Size = new System.Drawing.Size(170, 20);
+            this.loginField.Size = new System.Drawing.Size(170, 19);
             this.loginField.TabIndex = 0;
             this.loginField.Text = "Введіть логін";
             this.loginField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.loginField.Click += new System.EventHandler(this.loginField_Click);
+            this.loginField.Enter += new System.EventHandler(this.loginField_Enter);
+            this.loginField.Leave += new System.EventHandler(this.loginField_Leave);
             // 
             // passwordField
             // 
             this.passwordField.BackColor = System.Drawing.SystemColors.MenuText;
+            this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordField.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.passwordField.Location = new System.Drawing.Point(58, 95);
-            this.passwordField.Mask = "Введіть пароль";
+            this.passwordField.Location = new System.Drawing.Point(59, 88);
             this.passwordField.Name = "passwordField";
-            this.passwordField.PasswordChar = '*';
-            this.passwordField.Size = new System.Drawing.Size(170, 20);
+            this.passwordField.Size = new System.Drawing.Size(170, 19);
             this.passwordField.TabIndex = 1;
+            this.passwordField.Text = "Введіть пароль";
             this.passwordField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.passwordField.Click += new System.EventHandler(this.passwordField_Click);
+            this.passwordField.Enter += new System.EventHandler(this.passwordField_Enter);
+            this.passwordField.Leave += new System.EventHandler(this.passwordField_Leave);
             // 
             // button1
             // 
